@@ -35,7 +35,7 @@ Para realizar modificações ou adicionar novas funcionalidades, consulte as se�
 ## ⚙️ Instalação
 Clone o repositório e instale as dependências:
 ```bash
-git clone https://github.com/seu-usuario/clinica-fisioterapia-landing-page.git
-cd clinica-fisioterapia-landing-page
+git clone https://github.com/tblima26/fisio-salmona.git
+cd fisio-salmona
 npm install
 npm run dev
