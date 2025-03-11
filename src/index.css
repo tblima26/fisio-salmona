@@ -9,4 +9,10 @@
     --font-inconsolata: "Inconsolata", monospace;
     --font-jetbrains: "JetBrains Mono", monospace;
     --font-codepro: "Source Code Pro", monospace;
+
+    --color-bege-claro: #f5f5dc;
+    --color-bege-suave: #e6e6b3;
+    --color-bege-medio: #d3d39b;
+    --color-bege-escuro: #b8b87a;
+    --color-bege-profundo: #a69f6d;
 }
