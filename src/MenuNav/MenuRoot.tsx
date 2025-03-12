@@ -1,12 +1,13 @@
 import React, { ReactNode } from 'react'
 
 interface MenuRootProps {
-    children: ReactNode
+    children: ReactNode,
+    link: string,
 }
 
-export function MenuRoot({ children }: MenuRootProps) {
+export function MenuRoot({ children, link }: MenuRootProps) {
     return (
-        <a>
+        <a href={link} className='flex items-center gap-4'>
             {children}
         </a>
     )
