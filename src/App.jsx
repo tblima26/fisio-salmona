@@ -3,65 +3,53 @@ import './App.css'
 import clinicImage from './images/clinic.jpg'
 import { Briefcase, Cherry, FileText, Heart, Phone, Users } from 'lucide-react'
 import { Menu } from './MenuNav/Menu';
-import { useRef } from 'react';
-
-
 
 function App() {
-
-
-  const scrollToSection = (elementRef) => {
-    elementRef.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-      inline: 'center',
-    });
-  };
 
   return (
     <>
       <div className="w-full h-32 flex  items-center justify-between px-6 bg-slate-500">
         <div className='text-4xl text-white font-montserrat' >Fisio Salmona</div>
         <div className='flex text-xl text-neutral-300 font-lato space-x-9' >
-          <Menu.Root href='###' >
+          <Menu.Root id='about' time={300}>
             <Menu.Icon icon={Users} />
             <Menu.Text text='About us' />
           </Menu.Root>
-          <Menu.Root>
+          <Menu.Root id='services' time={300}>
             <Menu.Icon icon={Briefcase} />
             <Menu.Text text="Services/Specialty" />
           </Menu.Root>
-          <Menu.Root>
+          <Menu.Root id='treatments' time={300}>
             <Menu.Icon icon={Heart} />
             <Menu.Text text="Treatments" />
           </Menu.Root>
-          <Menu.Root>
+          <Menu.Root id='articles' time={300}>
             <Menu.Icon icon={FileText} />
             <Menu.Text text="Articles" />
           </Menu.Root>
-          <Menu.Root>
+          <Menu.Root id='contact' time={300}>
             <Menu.Icon icon={Phone} />
             <Menu.Text text="Contact Us" />
           </Menu.Root>
         </div>
       </div>
       <img src={clinicImage} alt='clinic' className='h-screen object-cover w-full' />
-      <div className='h-screen flex justify-center items-center'>
+      <div id='about' className='h-screen flex justify-center items-center'>
         <span className='text-7xl font-montserrat'>About Us</span>
       </div>
-      <div className='h-screen flex justify-center items-center'>
+      <div id='services' className='h-screen flex justify-center items-center'>
         <span className='text-7xl font-montserrat'>Services/ Specially</span>
       </div>
-      <div className='h-screen flex justify-center items-center'>
+      <div id='treatments' className='h-screen flex justify-center items-center'>
         <span className='text-7xl font-montserrat'>Treatments</span>
       </div>
-      <div className='h-screen flex justify-center items-center'>
+      <div id='articles' className='h-screen flex justify-center items-center'>
         <span className='text-7xl font-montserrat'>Articles</span>
       </div>
-      <div className='h-screen flex justify-center items-center'>
+      <div id='contact' className='h-screen flex justify-center items-center'>
         <span className='text-7xl font-montserrat'>Contact Us</span>
       </div>
-      <div className="w-full h-32 flex flex-col items-center justify-center bg-slate-500">
+      <div id='footer' className="w-full h-32 flex flex-col items-center justify-center bg-slate-500">
         <h1 className='text-5xl text-white font-jetbrains flex items-center gap-5' ><Cherry size={30} />Next  Elements <Cherry size={30} /></h1>
 
         <span className='text-2xl text-neutral-300 font-lato' >Put your new elements</span>

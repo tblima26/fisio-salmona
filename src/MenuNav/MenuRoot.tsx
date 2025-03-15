@@ -1,13 +1,17 @@
 import React, { AnchorHTMLAttributes, ReactNode } from 'react'
+import { Link } from 'react-scroll'
 
-interface MenuRootProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+
+interface MenuRootProps {
     children: ReactNode,
+    id: string,
+    time: number,
 }
 
-export function MenuRoot({ children, ...props }: MenuRootProps) {
+export function MenuRoot({ children, id, time }: MenuRootProps) {
     return (
-        <a {...props} href='###' className='flex items-center space-x-1'>
+        <Link to={id} smooth={true} duration={time} className='flex items-center space-x-1 cursor-pointer'>
             {children}
-        </a>
+        </Link>
     )
 }
