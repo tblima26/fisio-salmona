@@ -1,13 +1,12 @@
-import React, { ReactNode } from 'react'
+import React, { AnchorHTMLAttributes, ReactNode } from 'react'
 
-interface MenuRootProps {
+interface MenuRootProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     children: ReactNode,
-    link: string,
 }
 
-export function MenuRoot({ children, link }: MenuRootProps) {
+export function MenuRoot({ children, ...props }: MenuRootProps) {
     return (
-        <a href={link} className='flex items-center gap-4'>
+        <a {...props} href='###' className='flex items-center space-x-1'>
             {children}
         </a>
     )

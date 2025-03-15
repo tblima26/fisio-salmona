@@ -16,3 +16,9 @@
     --color-bege-escuro: #b8b87a;
     --color-bege-profundo: #a69f6d;
 }
+
+@layer base {
+    body {
+        @apply bg-neutral-100;
+    }
+}
