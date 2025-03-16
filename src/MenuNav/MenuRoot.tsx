@@ -1,4 +1,4 @@
-import React, { AnchorHTMLAttributes, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { Link } from 'react-scroll'
 
 
