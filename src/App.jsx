@@ -6,6 +6,8 @@ import { Briefcase, CalendarClock, CalendarDays, Cherry, FileText, GraduationCap
 import { Menu } from './Component/MenuNav/Menu';
 import { Info } from './Component/InfoGrid/Infor';
 import FormInfo from './Component/FormContact/FormInfo';
+import ContactUs from './Component/ContactUs';
+import AboutMe from './Component/AboutMe';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,16 +22,16 @@ function App() {
 
   return (
     <>
-      <div className={`w-full h-14 flex items-center justify-between  fixed z-10 
-      transition-all duration-300 p-10
+      <div className={`w-full h-10 flex items-center justify-between  fixed z-10 
+      transition-all duration-300 p-8
       ${scrolled ? "bg-slate-700/75  shadow-2xl text-white " : " bg-transparent text-neutral-200 "}`}>
         <div className="text-4xl font-montserrat">
           <a href="/">Fisio Salmona</a>
         </div>
-        <div className="flex text-xl font-lato space-x-9">
+        <div className="flex space-x-5">
           <Menu.Root id="about" time={500}>
             <Menu.Icon icon={Users} />
-            <Menu.Text text="About us" />
+            <Menu.Text text="About Me" />
           </Menu.Root>
           <Menu.Root id="services" time={600}>
             <Menu.Icon icon={Briefcase} />
@@ -76,8 +78,9 @@ function App() {
         </Info.Root>
       </div>
 
-      <div id='about' className='h-screen flex justify-center items-center'>
-        <span className='text-7xl font-montserrat'>About Us</span>
+      <div id='about' className='h-screen flex justify-center items-center space-x-10'>
+        <img src='./src/Images/karol.jpg' className='h-5/6 w-auto rounded-4xl shadow-2xl' />
+        <AboutMe />
       </div>
       <div id='services' className='h-screen flex justify-center items-center'>
         <span className='text-7xl font-montserrat'>Services/ Specially</span>
@@ -90,23 +93,9 @@ function App() {
         <span className='text-7xl font-montserrat'>Articles</span>
       </div>
 
-      <div id='contact' className='h-screen flex justify-center items-center 
-      bg-[url(./src/Images/contactus.jpg)] bg-cover'>
-        <div class="relative bg-neutral-900/70 rounded-tl-xl rounded-bl-xl
-        h-auto w-1/5 p-10 flex items-center justify-center ">
-          <div class="w-full max-w-md space-y-6">
-            <h2 class="text-white text-2xl font-bold text-center">Contact Us</h2>
-            <form class="grid grid-cols-3 gap-4">
-              <input type="text" placeholder="Name" class="w-full p-3 bg-transparent border border-white placeholder-white text-white rounded-md  col-span-3" />
-              <input type="tel" placeholder="Phone" class="w-full p-3 bg-transparent border border-white placeholder-white text-white rounded-md " />
-              <input type="email" placeholder="Email" class="w-full p-3 bg-transparent border border-white placeholder-white text-white rounded-md  col-span-2" />
-              <button type="submit" class="w-full flex items-center justify-center  p-3 bg-neutral-300 text-gray-900 font-bold rounded-md col-span-3">
-                <Send className=' h-4 w-4 mr-3' />
-                Send
-              </button>
-            </form>
-          </div>
-        </div>
+      <div id='contact' className='h-screen flex justify-center items-center space-x-12'>
+        <img src='./src/Images/contactus.jpg' className='h-1/2 w-auto rounded-4xl ' />
+        <ContactUs />
       </div>
       <div id='footer' className="w-full h-32 flex flex-col items-center justify-center bg-slate-500">
         <h1 className='text-5xl text-white font-jetbrains flex items-center gap-5' >
@@ -118,3 +107,12 @@ function App() {
 }
 
 export default App
+{/**
+  COMENTARIOS
+
+  Div com imagem de beckground completo. 
+  <div id='contact' className='h-screen flex justify-center items-center 
+      bg-[url(./src/Images/contactus.jpg)] bg-cover'>
+  
+  
+  */}

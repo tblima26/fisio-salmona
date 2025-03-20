@@ -6,6 +6,6 @@ interface MenuIconProps {
 
 export function MenuIcon({ icon: Icon }: MenuIconProps) {
     return (
-        <Icon />
+        <Icon className=' mr-1.5 ' />
     )
 }

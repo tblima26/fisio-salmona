@@ -6,6 +6,6 @@ interface MenuTextProps {
 
 export function MenuText({ text }: MenuTextProps) {
     return (
-        <span>{text}</span>
+        <span className='text-sm font-poppins'>{text}</span>
     )
 }
