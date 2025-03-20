@@ -6,6 +6,7 @@ interface MenuRootProps {
     children: ReactNode,
     id: string,
     time: number,
+    onClick?: () => void,
 }
 
 export function MenuRoot({ children, id, time }: MenuRootProps) {
