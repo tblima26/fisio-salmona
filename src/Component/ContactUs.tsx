@@ -10,8 +10,8 @@ export default function ContactUs() {
         <div className="h-1/2 p-5  flex flex-col justify-between">
             <SectionTitle title='Contact Us' />
             <div className=" ">
-                <span className='font-montserrat font-bold text-4xl text-slate-500 '>Connect </span>
-                <span className='font-montserrat font-bold text-4xl text-slate-800'> with Us today!</span>
+                <span className='font-montserrat font-bold text-4xl text-slate-500 '>Contact </span>
+                <span className='font-montserrat font-bold text-4xl text-slate-800'> with Me today!</span>
             </div>
             <div className=''>
                 <form className="grid grid-cols-4 gap-4">

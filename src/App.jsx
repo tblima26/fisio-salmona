@@ -82,14 +82,16 @@ function App() {
         <img src='./src/Images/karol.jpg' className='h-5/6 w-auto rounded-4xl shadow-2xl' />
         <AboutMe />
       </div>
-      <div id='services' className='h-screen flex justify-center items-center'>
+      <div id='services' className='h-screen flex justify-center items-center
+      bg-gradient-to-r from-sky-500 to-slate-600'>
         <span className='text-7xl font-montserrat'>Services/ Specially</span>
       </div>
       <div id='treatments' className='h-screen flex justify-center items-center'>
         <span className='text-7xl font-montserrat'>Treatments</span>
         <FormInfo />
       </div>
-      <div id='articles' className='h-screen flex justify-center items-center'>
+      <div id='articles'
+        className='h-screen flex justify-center items-center bg-gradient-to-r from-sky-500 to-slate-600'>
         <span className='text-7xl font-montserrat'>Articles</span>
       </div>
 
