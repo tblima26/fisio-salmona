@@ -67,7 +67,7 @@ function App() {
           <Info.Card>
             <Info.Title icon={MapPinned} title='Mission' />
             <Info.SubTitle text=' Location & Service' />
-            <Info.Content text='CCommitted to promoting health and well-being, we
+            <Info.Content text='Committed to promoting health and well-being, we
             offer personalized treatments for everyone. We accept a variety of 
             insurance plans to ensure easy access to our services.' />
           </Info.Card>
@@ -87,7 +87,10 @@ function App() {
       <div className='w-full h-[10vw] bg-emerald-800'>
 
       </div>
-      <div id='services' className='h-screen flex flex-col justify-center items-center gap-1.5'>
+      <div id='services' className='h-screen flex flex-col justify-center items-center gap-5'>
+
+
+
 
         <Specially />
       </div>
@@ -96,7 +99,7 @@ function App() {
         <FormInfo />
       </div>
       <div id='articles'
-        className='h-screen flex justify-center items-center bg-gradient-to-r from-sky-500 to-slate-600'>
+        className='h-screen flex justify-center items-center bg-emerald-100'>
         <span className='text-7xl font-montserrat'>Articles</span>
       </div>
 
@@ -114,12 +117,3 @@ function App() {
 }
 
 export default App
-{/**
-  COMENTARIOS
-
-  Div com imagem de beckground completo. 
-  <div id='contact' className='h-screen flex justify-center items-center 
-      bg-[url(./src/Images/contactus.jpg)] bg-cover'>
-  
-  
-  */}

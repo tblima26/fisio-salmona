@@ -6,6 +6,6 @@ interface AboutIconProps {
 
 export function AboutIcon({ icon: Icon }: AboutIconProps) {
     return (
-        <Icon className='text-slate-500 h-8 w-auto' />
+        <Icon className='text-neutral-500 h-8 w-auto' />
     )
 }

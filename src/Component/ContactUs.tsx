@@ -10,8 +10,8 @@ export default function ContactUs() {
         <div className="h-1/2 p-5  flex flex-col justify-between">
             <SectionTitle title='Contact Us' />
             <div className=" ">
-                <span className='font-montserrat font-bold text-4xl text-slate-500 '>Contact </span>
-                <span className='font-montserrat font-bold text-4xl text-slate-800'> with Me today!</span>
+                <span className='font-montserrat font-bold text-4xl text-emerald-400 '>Contact </span>
+                <span className='font-montserrat font-bold text-4xl text-emerald-800'> with Me today!</span>
             </div>
             <div className=''>
                 <form className="grid grid-cols-4 gap-4">
@@ -22,7 +22,7 @@ export default function ContactUs() {
                     <textarea {...register('text')} placeholder="How can I help you?"
                         className="w-full p-3 border border-neutral-300 placeholder-black text-slate-600 rounded-md col-span-4 resize-none" />
                     <button
-                        className="flex items-center justify-center  p-3 bg-slate-600 text-white font-bold rounded-3xl hover:bg-slate-800 transition-all
+                        className="flex items-center justify-center  p-3 bg-emerald-500 text-white font-bold rounded-3xl hover:bg-emerald-800 transition-all
                     duration-600"
                         type="submit"
                     >
