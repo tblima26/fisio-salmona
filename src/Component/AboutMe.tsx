@@ -41,7 +41,7 @@ export default function AboutMe() {
                     <About.Text text='Support & Motivation' />
                 </About.Root>
             </div>
-            <hr />
+            <hr className=' border-t-2 border-slate-400' />
             <div className='flex items-center justify-between'>
                 <div className='flex space-x-5'>
                     <img src='./src/Images/salmona.png'

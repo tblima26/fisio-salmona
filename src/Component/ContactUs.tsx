@@ -19,7 +19,7 @@ export default function ContactUs() {
                     <input {...register('tel')} type="tel" placeholder="Phone" className="w-full p-3 border border-neutral-300 placeholder-black text-slate-600 rounded-md  col-span-2" />
                     <input {...register('email')} type="email" placeholder="Email" className="w-full p-3 border border-neutral-300 placeholder-black text-slate-600 rounded-md  col-span-2" />
                     <input {...register('subject')} type="subject" placeholder="subject" className="w-full p-3 border border-neutral-300 placeholder-black text-slate-600 rounded-md  col-span-2" />
-                    <textarea {...register('text')} placeholder="Your message"
+                    <textarea {...register('text')} placeholder="How can I help you?"
                         className="w-full p-3 border border-neutral-300 placeholder-black text-slate-600 rounded-md col-span-4 resize-none" />
                     <button
                         className="flex items-center justify-center  p-3 bg-slate-600 text-white font-bold rounded-3xl hover:bg-slate-800 transition-all
