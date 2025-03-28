@@ -6,7 +6,7 @@ interface InfoSubTitleProps {
 
 export default function InfoSubTitle({ text }: InfoSubTitleProps) {
     return (
-        <div className='text-slate-700 mb-1.5 font-bold font-poppins'>{text}</div>
+        <div className='text-emerald-800 mb-1.5 font-bold font-poppins'>{text}</div>
     )
 }
 

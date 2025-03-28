@@ -1,15 +1,16 @@
 
-import './App.css'
-import { useState, useEffect } from 'react'
+import './App.css';
+import { useState, useEffect } from 'react';
 //import clinicImage from './images/clinic.jpg'
-import { Briefcase, CalendarClock, CalendarDays, Cherry, FileText, GraduationCap, Heart, MapPinned, Phone, Send, Users } from 'lucide-react'
+import { Briefcase, CalendarDays, Cherry, FileText, GraduationCap, Heart, MapPinned, Phone, Users } from 'lucide-react';
 import { Menu } from './Component/MenuNav/Menu';
 import { Info } from './Component/InfoGrid/Infor';
-import FormInfo from './Component/FormContact/FormInfo';
 import ContactUs from './Component/ContactUs';
 import AboutMe from './Component/AboutMe';
 import Specially from './Component/Specially';
-import SectionTitle from './Component/Commum/SectionTitle';
+import { Link } from 'react-scroll';
+import MyArticles from './Component/MyArticles';
+import SmallBanner from './Component/SmallBanner';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,9 +27,13 @@ function App() {
     <>
       <div className={`w-full h-10 flex items-center justify-between  fixed z-10 
       transition-all duration-300 p-8
-      ${scrolled ? "bg-slate-700/75  shadow-2xl text-white " : " bg-transparent text-neutral-200 "}`}>
+      ${scrolled ? "bg-emerald-700/75  shadow-2xl text-white " : " bg-transparent text-neutral-200 "}`}>
         <div className="text-4xl font-montserrat">
-          <a href="/">Fisio Salmona</a>
+          <Link to='top' smooth={true} duration={700} className='cursor-pointer' >
+            <span>
+              Fisio Salmona
+            </span>
+          </Link>
         </div>
         <div className="flex space-x-5">
           <Menu.Root id="about" time={500}>
@@ -53,7 +58,7 @@ function App() {
           </Menu.Root>
         </div>
       </div>
-      <div className="h-screen bg-center flex items-center justify-center">
+      <div id='top' className="h-screen bg-center flex items-center justify-center">
         <img src="./src/Images/clinic.jpg" alt="Clinic"
           className="absolute brightness-50 h-screen w-full object-cover" />
         <Info.Root>
@@ -79,32 +84,23 @@ function App() {
           </Info.Card>
         </Info.Root>
       </div>
-
       <div id='about' className='h-screen flex justify-center items-center space-x-10'>
         <img src='./src/Images/karol.jpg' className='h-5/6 w-auto rounded-4xl shadow-2xl' />
         <AboutMe />
       </div>
-      <div className='w-full h-[10vw] bg-emerald-800'>
-
-      </div>
+      <SmallBanner />
       <div id='services' className='h-screen flex flex-col justify-center items-center gap-5'>
-
-
-
-
         <Specially />
       </div>
       <div id='treatments' className='h-screen flex justify-center items-center'>
         <span className='text-7xl font-montserrat'>Treatments</span>
-        <FormInfo />
-      </div>
-      <div id='articles'
-        className='h-screen flex justify-center items-center bg-emerald-100'>
-        <span className='text-7xl font-montserrat'>Articles</span>
-      </div>
 
+      </div>
+      <div id='articles' className='h-screen flex justify-center items-center'>
+        <MyArticles />
+      </div>
       <div id='contact' className='h-screen flex justify-center items-center space-x-12'>
-        <img src='./src/Images/contactus.jpg' className='h-1/2 w-auto rounded-4xl ' />
+        <img src='./src/Images/contactus.jpg' className='h-1/2 w-auto rounded-4xl shadow-2xl' />
         <ContactUs />
       </div>
       <div id='footer' className="w-full h-32 flex flex-col items-center justify-center bg-slate-500">

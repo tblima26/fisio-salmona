@@ -8,7 +8,7 @@ interface InfoTitleProps {
 
 export function InfoTitle({ title, icon: Icon }: InfoTitleProps) {
     return (
-        <div className='flex items-center text-xl text-sky-400
+        <div className='flex items-center text-xl text-emerald-600
          font-poppins space-x-4 mb-2'>
             <div>
                 <Icon className='w-6 h-auto' />
