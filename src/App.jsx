@@ -11,6 +11,7 @@ import Specially from './Component/Specially';
 import { Link } from 'react-scroll';
 import MyArticles from './Component/MyArticles';
 import SmallBanner from './Component/SmallBanner';
+import Treatments from './Component/Treatments';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,7 +43,7 @@ function App() {
           </Menu.Root>
           <Menu.Root id="services" time={600}>
             <Menu.Icon icon={Briefcase} />
-            <Menu.Text text="Services/Specialty" />
+            <Menu.Text text="Specialty" />
           </Menu.Root>
           <Menu.Root id="treatments" time={700}>
             <Menu.Icon icon={Heart} />
@@ -93,8 +94,7 @@ function App() {
         <Specially />
       </div>
       <div id='treatments' className='h-screen flex justify-center items-center'>
-        <span className='text-7xl font-montserrat'>Treatments</span>
-
+        <Treatments />
       </div>
       <div id='articles' className='h-screen flex justify-center items-center'>
         <MyArticles />

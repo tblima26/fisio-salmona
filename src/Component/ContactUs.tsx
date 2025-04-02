@@ -46,7 +46,7 @@ export default function ContactUs() {
                     <textarea {...register('text')} placeholder="How can I help you?"
                         className="w-full p-3 border border-neutral-300 placeholder-black text-slate-600 rounded-md col-span-4 resize-none" />
                     <button
-                        className={`flex items-center justify-center p-3 font-bold rounded-3xl transition-all duration-600 font-montserrat
+                        className={`flex items-center justify-center p-3 font-bold rounded-2xl transition-all duration-600 font-montserrat
                                 ${isSubmitting ? 'bg-gray-200 cursor-not-allowed text-emerald-800 border-2 border-emerald-800' : 'bg-emerald-500 hover:bg-emerald-800 text-white'}`}
                         type="submit"
                         disabled={isSubmitting}
