@@ -12,6 +12,7 @@ import { Link } from 'react-scroll';
 import MyArticles from './Component/MyArticles';
 import SmallBanner from './Component/SmallBanner';
 import Treatments from './Component/Treatments';
+import Footer from './Component/Footer';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -103,11 +104,7 @@ function App() {
         <img src='./src/Images/contactus.jpg' className='h-1/2 w-auto rounded-4xl shadow-2xl' />
         <ContactUs />
       </div>
-      <div id='footer' className="w-full h-32 flex flex-col items-center justify-center bg-slate-500">
-        <h1 className='text-5xl text-white font-jetbrains flex items-center gap-5' >
-          <Cherry size={30} />Next  Elements <Cherry size={30} /></h1>
-        <span className='text-2xl text-neutral-300 font-lato' >Put your new elements</span>
-      </div>
+      <Footer />
     </>
   )
 }
