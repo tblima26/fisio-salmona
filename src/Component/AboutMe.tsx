@@ -5,8 +5,6 @@ import ButtonLink from './ButtonLink/ButtonLink'
 import SectionTitle from './Commum/SectionTitle'
 import gsap from 'gsap'
 
-
-
 export default function AboutMe() {
     const titleRef = useRef(null)
     const textRef = useRef(null)
@@ -88,7 +86,7 @@ export default function AboutMe() {
             <hr className=' border-t-2 border-emerald-800' />
             <div ref={baseRef} className='flex items-center justify-between'>
                 <div className='flex space-x-5'>
-                    <img src='./src/Images/salmona.png'
+                    <img src='../public/Images/salmona.png'
                         className='max-h-24 w-auto shadow-2xl rounded-full ' />
                     <div className='flex flex-col justify-around '>
                         <span className='text-2xl font-semibold font-poppins text-emerald-800'>Dr. Karolina Bastos</span>
