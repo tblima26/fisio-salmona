@@ -64,7 +64,7 @@ function App() {
       </div>
       <div id='top'
         className="h-screen bg-center flex items-center justify-center">
-        <img src="./public/Images/clinic.jpg" alt="Clinic"
+        <img src="/Images/clinic.jpg" alt="Clinic"
           className="absolute brightness-50 h-screen w-full object-cover" />
         <Info.Root>
           <Info.Card>
@@ -90,7 +90,7 @@ function App() {
         </Info.Root>
       </div>
       <div id='about' className='h-screen flex justify-center items-center space-x-10'>
-        <img src='./public/Images/karol.jpg' className='h-5/6 w-auto rounded-4xl shadow-2xl' />
+        <img src='/Images/karol.jpg' className='h-5/6 w-auto rounded-4xl shadow-2xl' />
         <AboutMe />
       </div>
       <SmallBanner />

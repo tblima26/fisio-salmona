@@ -86,8 +86,8 @@ export default function AboutMe() {
             <hr className=' border-t-2 border-emerald-800' />
             <div ref={baseRef} className='flex items-center justify-between'>
                 <div className='flex space-x-5'>
-                    <img src='../public/Images/salmona.png'
-                        className='max-h-24 w-auto shadow-2xl rounded-full ' />
+                    <img src="/Images/salmona.png" className="max-h-24 w-auto shadow-2xl rounded-full" />
+
                     <div className='flex flex-col justify-around '>
                         <span className='text-2xl font-semibold font-poppins text-emerald-800'>Dr. Karolina Bastos</span>
                         <span className='font-poppins text-neutral-500'>Physiotherapy</span>
