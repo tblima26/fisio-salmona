@@ -16,7 +16,7 @@ export default function MyArticles() {
             </div>
             <Article.Root>
                 <Article.Card>
-                    <Article.Image path='../public/Images/article.jpg' />
+                    <Article.Image path='/Images/article.jpg' />
                     <Article.Content>
                         <Article.Title text='Manual vs. Automático: Qual é a Melhor Técnica para Avaliar Úlceras por Pressão?' />
                         <Article.Action icon={Newspaper} text='Read Me' onClick={() => {
@@ -29,7 +29,7 @@ export default function MyArticles() {
                     </Article.Content>
                 </Article.Card>
                 <Article.Card>
-                    <Article.Image path='../public/Images/back.jpg' />
+                    <Article.Image path='/Images/back.jpg' />
                     <Article.Content>
                         <Article.Title text='Relaxamento e Bem-Estar: Os Benefícios da Massagem Terapêutica' />
                         <Article.Action icon={Newspaper} text='Read Me' onClick={() => {

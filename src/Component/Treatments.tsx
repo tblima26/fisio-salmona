@@ -79,7 +79,7 @@ export default function Treatments() {
         <div className='flex items-center justify-center space-x-20 h-2/3'>
             <div className='flex flex-col space-y-10 w-2xl h-full'>
                 <div ref={imgRef}>
-                    <img src='../public/Images/shoulder.jpg'
+                    <img src='/Images/shoulder.jpg'
                         className='h-64 w-2xl object-cover rounded-l-4xl rounded-br-4xl 
                     rounded-tr-[150px] shadow-2xl' />
                 </div>
