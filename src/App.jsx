@@ -104,7 +104,7 @@ function App() {
         <MyArticles />
       </div>
       <div id='contact' className='h-screen flex justify-center items-center space-x-12'>
-        <img src='./public/Images/contactus.jpg' className='h-1/2 w-auto rounded-4xl shadow-2xl' />
+        <img src='/Images/contactus.jpg' className='h-1/2 w-auto rounded-4xl shadow-2xl' />
         <ContactUs />
       </div>
       <Footer />
