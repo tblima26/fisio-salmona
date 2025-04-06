@@ -20,18 +20,19 @@ export default function Specially() {
                     <ButtonLink icon={PhoneCall} id='contact' text='Get Started on Your Recovery' time={700} />
                 </div>
             </div>
-
-            <Service.Root>
-                {serviceData.map((service, index) => (
-                    <Service.Card key={index}>
-                        <div className='space-y-4 group-hover:text-neutral-100'>
-                            <Service.Icon icon={service.icon} />
-                            <Service.Title text={service.title} />
-                        </div>
-                        <Service.Content text={service.content} />
-                    </Service.Card>
-                ))}
-            </Service.Root>
+            <div>
+                <Service.Root>
+                    {serviceData.map((service, index) => (
+                        <Service.Card key={index}>
+                            <div className='space-y-4 group-hover:text-neutral-100'>
+                                <Service.Icon icon={service.icon} />
+                                <Service.Title text={service.title} />
+                            </div>
+                            <Service.Content text={service.content} />
+                        </Service.Card>
+                    ))}
+                </Service.Root>
+            </div>
         </div>
     )
 }

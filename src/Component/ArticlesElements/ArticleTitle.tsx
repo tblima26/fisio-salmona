@@ -7,7 +7,7 @@ interface ArticleTitleProps {
 export function ArticleTitle({ text }: ArticleTitleProps) {
     return (
         <div className=' font-poppins text-justify text-xl 
-        text-wrap indent-8'>
+        text-wrap'>
             {text}
         </div>
     )

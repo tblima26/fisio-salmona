@@ -14,6 +14,7 @@ import SmallBanner from './Component/SmallBanner';
 import Treatments from './Component/Treatments';
 import Footer from './Component/Footer';
 
+
 function App() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -24,6 +25,7 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   return (
     <>
@@ -60,7 +62,8 @@ function App() {
           </Menu.Root>
         </div>
       </div>
-      <div id='top' className="h-screen bg-center flex items-center justify-center">
+      <div id='top'
+        className="h-screen bg-center flex items-center justify-center">
         <img src="./src/Images/clinic.jpg" alt="Clinic"
           className="absolute brightness-50 h-screen w-full object-cover" />
         <Info.Root>

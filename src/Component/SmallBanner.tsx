@@ -1,7 +1,10 @@
 import React from 'react'
 import { Small } from './SmallBanner/Small'
 
+
 export default function SmalBanner() {
+
+
     return (
         <div className='w-full h-[10vw] bg-emerald-800'>
             <Small.Root>
