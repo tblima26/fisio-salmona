@@ -20,7 +20,11 @@ export default function MyArticles() {
                     <Article.Content>
                         <Article.Title text='Manual vs. Automático: Qual é a Melhor Técnica para Avaliar Úlceras por Pressão?' />
                         <Article.Action icon={Newspaper} text='Read Me' onClick={() => {
-                            window.open('http://revista.cofen.gov.br/index.php/enfermagem/issue/download/22/2', '_blank');
+                            const link = document.createElement('a')
+                            link.href = 'http://revista.cofen.gov.br/index.php/enfermagem/issue/download/22/2';
+                            link.target = '_parent';
+                            link.id = 'pdfDownloadLink';
+                            link.click();
                         }} />
                     </Article.Content>
                 </Article.Card>
@@ -29,8 +33,7 @@ export default function MyArticles() {
                     <Article.Content>
                         <Article.Title text='Relaxamento e Bem-Estar: Os Benefícios da Massagem Terapêutica' />
                         <Article.Action icon={Newspaper} text='Read Me' onClick={() => {
-                            const error = window.open('http://revista.cofen.gov.br/index.php/enfermagem/issue/download/22/2', '_blank')
-                            console.log(error)
+                            window.open('/ar.pdf', '_blank');
                         }} />
                     </Article.Content>
                 </Article.Card>
