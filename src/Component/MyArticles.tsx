@@ -33,7 +33,7 @@ export default function MyArticles() {
                     <Article.Content>
                         <Article.Title text='Relaxamento e Bem-Estar: Os Benefícios da Massagem Terapêutica' />
                         <Article.Action icon={Newspaper} text='Read Me' onClick={() => {
-                            window.open('/ar.pdf', '_blank');
+                            window.open('/Articles/ar1.pdf', '_blank');
                         }} />
                     </Article.Content>
                 </Article.Card>
