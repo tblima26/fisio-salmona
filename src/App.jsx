@@ -34,7 +34,7 @@ function App() {
     gsap.fromTo(imgForm,
       { opacity: 0, x: - 100, },
       {
-        opacity: 1, x: 0, duration: 2, ease: "power1.inOut",
+        opacity: 1, x: 0, duration: 1.5, ease: "power1.inOut",
         scrollTrigger: {
           trigger: imgForm,
           start: "top 80%",
