@@ -1,6 +1,6 @@
 
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 //import clinicImage from './images/clinic.jpg'
 import { Briefcase, CalendarDays, Cherry, FileText, GraduationCap, Heart, MapPinned, Phone, Users } from 'lucide-react';
 import { Menu } from './Component/MenuNav/Menu';
@@ -13,10 +13,12 @@ import MyArticles from './Component/MyArticles';
 import SmallBanner from './Component/SmallBanner';
 import Treatments from './Component/Treatments';
 import Footer from './Component/Footer';
+import gsap from 'gsap';
 
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const imgRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,22 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const imgForm = imgRef.current
+
+    gsap.fromTo(imgForm,
+      { opacity: 0, x: - 100 },
+      {
+        opacity: 1, x: 0, duration: 2,
+        scrollTrigger: {
+          trigger: imgForm,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        }
+      }
+    )
+
+  }, [])
 
   return (
     <>
@@ -104,7 +122,7 @@ function App() {
         <MyArticles />
       </div>
       <div id='contact' className='h-screen flex justify-center items-center space-x-12'>
-        <img src='/Images/contactus.jpg' className='h-1/2 w-auto rounded-4xl shadow-2xl' />
+        <img ref={imgRef} src='/Images/contactus.jpg' className='h-1/2 w-auto rounded-4xl shadow-2xl' />
         <ContactUs />
       </div>
       <Footer />

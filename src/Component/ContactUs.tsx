@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { z } from 'zod'
 import { Loader, Send, X } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import SectionTitle from './Commum/SectionTitle'
 import { zodResolver } from '@hookform/resolvers/zod'
+import gsap from 'gsap'
 
 const informationClientSchema = z.object({
     name: z.string().min(3, "Name must have at least 3 characters."),
@@ -18,6 +19,36 @@ const informationClientSchema = z.object({
 type InformationClientSchema = z.infer<typeof informationClientSchema>
 
 export default function ContactUs() {
+    const formRef = useRef(null)
+    const headRef = useRef(null)
+
+
+    useEffect(() => {
+        const formBase = formRef.current
+        const head = headRef.current
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: head,
+                start: "top 60%",
+                toggleActions: "play none none none"
+            },
+            defaults: {
+                duration: 1,
+                ease: "power1.in"
+            }
+        })
+
+        tl.fromTo(head,
+            { opacity: 0, x: -100 },
+            { opacity: 1, x: 0 }
+        ).fromTo(formBase,
+            { opacity: 0, x: 100 },
+            { opacity: 1, x: 0 }
+        )
+
+    }, [])
+
     const { register, handleSubmit, formState: { errors, isSubmitting } } =
         useForm<InformationClientSchema>({
             resolver: zodResolver(informationClientSchema)
@@ -32,11 +63,11 @@ export default function ContactUs() {
     return (<>
         <div className="h-1/2 p-5  flex flex-col justify-between">
             <SectionTitle title='Contact Us' />
-            <div>
+            <div ref={headRef}>
                 <span className='font-montserrat font-bold text-4xl text-emerald-400 '>Contact </span>
                 <span className='font-montserrat font-bold text-4xl text-emerald-800'> with Me today!</span>
             </div>
-            <div className=''>
+            <div ref={formRef} className=''>
                 <form onSubmit={handleSubmit(handleCallWhatsapp)}
                     className="grid grid-cols-4 gap-4">
                     <input {...register('name')} type="text" placeholder="Name" className="w-full p-3 border border-neutral-300 placeholder-black text-slate-600 rounded-md  col-span-2" />

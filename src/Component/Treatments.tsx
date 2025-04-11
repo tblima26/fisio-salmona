@@ -72,9 +72,6 @@ export default function Treatments() {
 
     }, [])
 
-
-
-
     return (
         <div className='flex items-center justify-center space-x-20 h-2/3'>
             <div className='flex flex-col space-y-10 w-2xl h-full'>
