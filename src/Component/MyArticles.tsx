@@ -14,7 +14,7 @@ export default function MyArticles() {
         const tl = gsap.timeline({
             crollTrigger: {
                 trigger: head, // ou pode criar uma `sectionRef` como container
-                start: "top 60%", // inicia com 40% visível
+                start: "top 50%", // inicia com 40% visível
                 toggleActions: "play none none none",
             },
             defaults: {
