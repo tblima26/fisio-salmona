@@ -32,7 +32,7 @@ function App() {
     const imgForm = imgRef.current
 
     gsap.fromTo(imgForm,
-      { opacity: 0, x: - 100 },
+      { opacity: 0, x: - 100, ease: "power1.inOut" },
       {
         opacity: 1, x: 0, duration: 2,
         scrollTrigger: {
